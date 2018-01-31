@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/paddle.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/ball.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 20, 10 )
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="World" type="Node2D" index="0"]
+
+[node name="Walls" type="StaticBody2D" parent="." index="0"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 0, 360, -40, 360, -40, -50, 670, -50, 670, 360, 640, 360, 640, 0, 0, 0 )
+
+[node name="Paddle" type="KinematicBody2D" parent="." index="1"]
+
+position = Vector2( 439, 316 )
+scale = Vector2( 10, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Paddle" index="0"]
+
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paddle" index="1"]
+
+shape = SubResource( 2 )
+
+[node name="Ball" type="RigidBody2D" parent="." index="2"]
+
+position = Vector2( 500, 130 )
+scale = Vector2( 0.1875, 0.1875 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 2
+mass = 1.0
+friction = 0.0
+bounce = 1.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 200, -20 )
+linear_damp = 0.0
+angular_velocity = 0.0
+angular_damp = 0.0
+_sections_unfolded = [ "Angular", "Linear" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Ball" index="0"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" index="1"]
+
+shape = SubResource( 1 )
+
+
