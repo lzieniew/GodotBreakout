@@ -7,10 +7,10 @@ path="res://.import/paddle.png-44fd2b6a89df7e66bb7be62b6c823d20.stex"
 [deps]
 
 source_file="res://Sprites/paddle.png"
-source_md5="f1092fa787bd846d302197b86a9881ea"
+source_md5="408429f3311b25e351403009e2d3724d"
 
 dest_files=[ "res://.import/paddle.png-44fd2b6a89df7e66bb7be62b6c823d20.stex" ]
-dest_md5="5be252a9ca148de485063705dfa055e8"
+dest_md5="d15a94f2e8230d379f6d4e3835c0df34"
 
 [params]
 

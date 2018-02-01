@@ -7,10 +7,10 @@ path="res://.import/brick.png-b95ec73c70364c1639d7f6bb53031bf8.stex"
 [deps]
 
 source_file="res://Sprites/brick.png"
-source_md5="5443b791b17abd1cf6b4fc23be96c1c8"
+source_md5="ac8b3b786f3e18f00871713157cd5059"
 
 dest_files=[ "res://.import/brick.png-b95ec73c70364c1639d7f6bb53031bf8.stex" ]
-dest_md5="885f1a12245e48e1e91bfbb4823bb48e"
+dest_md5="8ac3c4cbbf86a8fb8fadc6ab606d1162"
 
 [params]
 
