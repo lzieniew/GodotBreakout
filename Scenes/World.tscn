@@ -1,0 +1,106 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Paddle.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/paddle.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Brick.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 20, 8.13043 )
+
+[node name="World" type="Node2D" index="0"]
+
+[node name="Walls" type="StaticBody2D" parent="." index="0"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 0, 360, -40, 360, -40, -50, 670, -50, 670, 360, 640, 360, 640, 0, 0, 0 )
+
+[node name="Paddle" type="KinematicBody2D" parent="." index="1"]
+
+position = Vector2( 132.5, 312 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="Paddle" index="0"]
+
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paddle" index="1"]
+
+scale = Vector2( 1, 0.3 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Point" type="Position2D" parent="Paddle" index="2"]
+
+position = Vector2( 0, 25 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Bricks" type="Node2D" parent="." index="2"]
+
+[node name="Brick" parent="Bricks" index="0" instance=ExtResource( 3 )]
+
+[node name="Brick2" parent="Bricks" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 290, 100 )
+
+[node name="Brick3" parent="Bricks" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 250, 100 )
+
+[node name="Brick4" parent="Bricks" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 410, 120 )
+
+[node name="Brick9" parent="Bricks" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 410, 100 )
+
+[node name="Brick5" parent="Bricks" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 370, 120 )
+
+[node name="Brick10" parent="Bricks" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 370, 100 )
+
+[node name="Brick6" parent="Bricks" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 250, 120 )
+
+[node name="Brick12" parent="Bricks" index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 210, 100 )
+
+[node name="Brick11" parent="Bricks" index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 210, 120 )
+
+[node name="Brick7" parent="Bricks" index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 330, 120 )
+
+[node name="Brick8" parent="Bricks" index="11" instance=ExtResource( 3 )]
+
+position = Vector2( 330, 100 )
+
+
