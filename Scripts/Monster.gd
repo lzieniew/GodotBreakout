@@ -6,5 +6,6 @@ func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body.is_in_group('player'):
-			print('dupa')
-			GAME_SCENE.instance()
+			var scene = GAME_SCENE.instance()
+			add_child(scene)
+			scene.position = Vector2(100, 100)

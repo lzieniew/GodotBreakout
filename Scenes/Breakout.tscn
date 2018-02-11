@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Scripts/World.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Breakout.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Paddle.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/paddle.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/ball.png" type="Texture" id=4]
@@ -14,9 +14,11 @@
 custom_solver_bias = 0.0
 extents = Vector2( 20, 8.13043 )
 
-[node name="Breakout" type="Node2D" index="0"]
+[node name="Breakout" type="Node2D"]
 
+z_index = 10
 script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Walls" type="StaticBody2D" parent="." index="0"]
 
@@ -38,12 +40,13 @@ polygon = PoolVector2Array( 0, 360, -40, 360, -40, -50, 670, -50, 670, 360, 640,
 
 editor/display_folded = true
 position = Vector2( 132.5, 312 )
+z_index = 10
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Paddle" index="0"]
 
@@ -75,6 +78,8 @@ texture = ExtResource( 4 )
 [node name="Bricks" type="Node2D" parent="." index="2"]
 
 editor/display_folded = true
+z_index = 10
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Brick" parent="Bricks" index="0" instance=ExtResource( 5 )]
 

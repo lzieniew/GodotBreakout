@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Prefabs/Background.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Background.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Tiles/tile0.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Tiles/tile1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Tiles/tile2.tscn" type="PackedScene" id=4]
 
-[node name="Tiles" type="Node"]
+[node name="Tiles" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
