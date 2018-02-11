@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const ball_scene = preload("res://Scenes/Ball.tscn")
+const ball_scene = preload("res://Prefabs/Ball.tscn")
 
 # class member variables go here, for example:
 # var a = 2
