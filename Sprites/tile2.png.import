@@ -7,10 +7,10 @@ path="res://.import/tile2.png-7213a210069aaae03b63c2524a6fd4e6.stex"
 [deps]
 
 source_file="res://Sprites/tile2.png"
-source_md5="1ff78fc2dfc8257b6a0436721abfb4ec"
+source_md5="9f468f2b7dd739b9eca34facd93301eb"
 
 dest_files=[ "res://.import/tile2.png-7213a210069aaae03b63c2524a6fd4e6.stex" ]
-dest_md5="77ab64885908c5a1f84d4bf37a15589d"
+dest_md5="b1173e70ffad06b85c6d27036ec14ca5"
 
 [params]
 

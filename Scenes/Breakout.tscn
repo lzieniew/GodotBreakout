@@ -14,7 +14,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 20, 8.13043 )
 
-[node name="Breakout" type="Node2D"]
+[node name="Breakout" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -73,6 +73,8 @@ __meta__ = {
 texture = ExtResource( 4 )
 
 [node name="Bricks" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
 
 [node name="Brick" parent="Bricks" index="0" instance=ExtResource( 5 )]
 

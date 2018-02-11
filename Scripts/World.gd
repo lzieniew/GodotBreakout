@@ -1,11 +1,9 @@
 extends Node2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+var score = 0 setget set_score, get_score
 
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func set_score(value):
+	get_node('Score').text = 'Score: ' + str(score)
+	
+func get_score():
+	return score

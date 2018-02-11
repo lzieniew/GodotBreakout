@@ -14,5 +14,8 @@ func _ready():
 			randomize()
 			var tile = tiles[randi()%len(tiles)].instance()
 			tile.position = Vector2(x,y)
+			randomize()
+			var rotation = (randi()%4) * 90
+			tile.rotation_degrees = rotation
 			add_child(tile)
 	
