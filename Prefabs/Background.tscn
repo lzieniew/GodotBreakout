@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/Background.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/Tiles/tile0.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Tiles/tile1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Tiles/tile2.tscn" type="PackedScene" id=4]
+
+[node name="Tiles" type="Node"]
+
+script = ExtResource( 1 )
+
+[node name="tile0" parent="." index="0" instance=ExtResource( 2 )]
+
+z_index = -1
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="tile1" parent="." index="1" instance=ExtResource( 3 )]
+
+z_index = -1
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="tile2" parent="." index="2" instance=ExtResource( 4 )]
+
+z_index = -1
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+

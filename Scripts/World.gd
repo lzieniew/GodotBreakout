@@ -4,8 +4,8 @@ extends Node2D
 # var a = 2
 # var b = "textvar"
 
-var score = 0 setget set_score
 
-func set_score(value):
-	score = value
-	get_node("Score").set_text('Score: ' + str(score))
+#func _process(delta):
+#	# Called every frame. Delta is time since last frame.
+#	# Update game logic here.
+#	pass
